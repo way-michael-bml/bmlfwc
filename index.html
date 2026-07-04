@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner Mountain Lookout Firewise Community</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="site-title" href="index.html">Banner Mountain Lookout
+      <span>Firewise Community</span>
+    </a>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="milestones.html">Milestones</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="hydrant.html">NID Hydrants</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Banner Mountain Lookout Firewise Community</h1>
+  <p class="tagline">Working together to protect our homes, reduce wildfire risks, and secure insurance discounts.</p>
+</div>
+
+<main>
+
+  <section>
+    <p>Welcome to our neighborhood's central Firewise portal. We are establishing an official Firewise Community to protect our properties, create a unified voice for local infrastructure improvements, and help neighbors qualify for wildfire insurance premium discounts.</p>
+  </section>
+
+  <section>
+    <h2>Our Neighborhood</h2>
+    <div class="map-block">
+      <iframe
+        src="https://www.360cities.net/embed_iframe/bmlo-v4#4.60,13.80,70.0"
+        width="100%"
+        height="480"
+        frameborder="0"
+        allowfullscreen
+        title="360° panorama of Banner Mountain Lookout">
+      </iframe>
+      <p class="map-caption">Interactive 360° panorama of our neighborhood. Click and drag to look around.</p>
+    </div>
+    <!--
+      Parcel map: when you have the boundary image, add it below the iframe.
+      Example: <img src="maps/parcel_map.png" alt="Banner Mountain Lookout neighborhood parcel map">
+      And update the caption text above accordingly.
+    -->
+  </section>
+
+  <section id="contact">
+    <h2>Join Our Mailing List</h2>
+    <p>Submit your information below to stay informed about community meetings, program updates, and next steps.</p>
+    <div class="contact-form">
+      <!--
+        Formspree setup:
+        1. Create a free account at formspree.io using your email address.
+        2. Create a new form — Formspree will give you a form ID (looks like "xpwzabcd").
+        3. Replace YOUR_FORM_ID below with that ID.
+      -->
+      <form action="https://formspree.io/f/xjgqjqko" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="Jane Smith">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="jane@example.com">
+        </div>
+        <div class="form-group">
+          <label for="address">Parcel Address</label>
+          <input type="text" id="address" name="parcel_address" required placeholder="1234 Banner Mountain Rd">
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Banner Mountain Lookout Firewise Community &mdash; A volunteer neighborhood initiative</p>
+</footer>
+
+</body>
+</html>
