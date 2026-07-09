@@ -21,7 +21,7 @@
       <li><a href="milestones.html">Milestones</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="faq.html">FAQ</a></li>
-      <li><a href="hydrant.html">NID Hydrants</a></li>
+      <li><a href="hydrant.html">Fire Hydrants</a></li>
     </ul>
   </nav>
 </header>
@@ -35,6 +35,77 @@
 
   <section>
     <p>Welcome to our neighborhood's central Firewise portal. We are establishing an official Firewise Community to protect our properties, create a unified voice for local infrastructure improvements, and help neighbors qualify for wildfire insurance premium discounts.</p>
+  </section>
+
+  <section>
+    <h2>Our Wildfire Risk</h2>
+    <!--
+      All three figures below are sourced (2026-07-08):
+      - CA Wildfire Percentile: apps.wildfirerisk.org (USFS), Risk to Homes, "Compare
+        to: State" for Nevada City = 87th percentile in California ("Very High").
+        Nevada City is the nearest place-level unit USFS's tool supports — it's the
+        incorporated city adjacent to Banner Mountain, not the neighborhood itself.
+      - CAL FIRE Hazard Tier: confirmed via direct query against CAL FIRE's official
+        FHSZ ArcGIS service (services.gis.ca.gov/.../Fire_Severity_Zones) at Banner
+        Mountain's coordinates: HAZ_CLASS "Very High" on both SRA and LRA layers.
+      - Fire Factor: sourced from an actual First Street property report for 13986
+        Banner Mountain Lookout Rd (on the community's namesake road) = 4/10
+        "Moderate" — a second independent address (12255 Red Dog Rd, community's
+        edge) matched at 4/10 too. Score is parcel-specific and will differ
+        elsewhere, hence the "check your own address" note under the row.
+    -->
+    <p class="risk-kicker">Statewide Risk Comparison &mdash; Banner Mtn. / Nevada County Baseline</p>
+    <div class="risk-kpi-row">
+      <div class="risk-tile">
+        <div class="risk-tile-value">87<sup>th</sup> <span class="risk-tile-unit">percentile</span></div>
+        <div class="risk-tile-meter">
+          <div class="risk-tile-meter-fill" style="width: 87%;"></div>
+        </div>
+        <div class="risk-tile-label">CA Wildfire Percentile</div>
+        <div class="risk-tile-sublabel"><a href="https://apps.wildfirerisk.org/explore/risk-to-homes/06/06057/0600050874/" target="_blank" rel="noopener">USFS Risk to Homes Model</a></div>
+      </div>
+      <div class="risk-tile">
+        <div class="risk-status-pill">&#9650; Very High</div>
+        <div class="risk-tile-label">CAL FIRE Hazard Tier</div>
+        <div class="risk-tile-sublabel">State Responsibility Area (SRA)</div>
+      </div>
+      <div class="risk-tile">
+        <div class="risk-tile-value">4<span class="risk-tile-unit">/ 10</span></div>
+        <div class="risk-tile-meter">
+          <div class="risk-tile-meter-fill" style="width: 40%;"></div>
+        </div>
+        <div class="risk-tile-label">Property Fire Factor&reg;</div>
+        <div class="risk-tile-sublabel"><a href="https://firststreet.org/property/13986-banner-mountain-lookout-rd-nevada-city-ca-95959/611931987_fsid/0" target="_blank" rel="noopener">First Street Foundation</a></div>
+      </div>
+    </div>
+    <p class="map-caption">Higher localized risk than ~87% of California communities, per USFS's Nevada City assessment. Fire Factor is scored per parcel and varies across the neighborhood &mdash; look up your own address at <a href="https://firststreet.org" target="_blank" rel="noopener">firststreet.org</a>.</p>
+
+    <details class="risk-methodology">
+      <summary>How these risk metrics are calculated</summary>
+      <p>The risk scores and regional comparisons shown above are derived from advanced geospatial fire-behavior modeling frameworks developed by the U.S. Forest Service (USFS) and the First Street Foundation.</p>
+      <p>Rather than relying purely on historic fire footprints, these models use high-resolution satellite imagery (at a 30-meter landscape scale) to map actual localized vegetation density, topography (slope steepness), and historic weather patterns over the last decade. Computer simulations run more than 100 million predictive &ldquo;Monte Carlo&rdquo; wildfire events across the country to observe how fires behave, how fast they travel up terrain, and how far wind-driven ember showers are likely to spread.</p>
+      <p>When applied to our specific Wildland-Urban Interface (WUI) corridor, these simulations calculate an annualized baseline probability of a major ignition. Because fire risk accumulates over time, individual annual chances compound into the multi-year risk horizons used to build these models, helping our community plan proactive fuel reduction and home-hardening efforts accordingly.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Live Fire Cameras</h2>
+    <p>Two ALERTCalifornia wildfire-detection cameras sit on Banner Mountain, right above our neighborhood. Check them any time for current smoke and weather conditions.</p>
+    <div class="camera-grid">
+      <div class="camera-card">
+        <a href="https://cameras.alertcalifornia.org/?pos=39.2604_-121.0106_13&id=Axis-BannerMtn1" target="_blank" rel="noopener">
+          <img id="cam-bannermtn1" src="https://cameras.alertcalifornia.org/public-camera-data/Axis-BannerMtn1/latest-frame.jpg" alt="Live view from the Banner Mountain 1 ALERTCalifornia camera" loading="lazy">
+        </a>
+        <p class="map-caption">Banner Mountain Cam 1 &mdash; <a href="https://cameras.alertcalifornia.org/?pos=39.2604_-121.0106_13&id=Axis-BannerMtn1" target="_blank" rel="noopener">view live, pan &amp; rewind</a></p>
+      </div>
+      <div class="camera-card">
+        <a href="https://cameras.alertcalifornia.org/?pos=39.2604_-121.0106_13&id=Axis-BannerMtn2" target="_blank" rel="noopener">
+          <img id="cam-bannermtn2" src="https://cameras.alertcalifornia.org/public-camera-data/Axis-BannerMtn2/latest-frame.jpg" alt="Live view from the Banner Mountain 2 ALERTCalifornia camera" loading="lazy">
+        </a>
+        <p class="map-caption">Banner Mountain Cam 2 &mdash; <a href="https://cameras.alertcalifornia.org/?pos=39.2604_-121.0106_13&id=Axis-BannerMtn2" target="_blank" rel="noopener">view live, pan &amp; rewind</a></p>
+      </div>
+    </div>
+    <p class="map-caption">Live imagery courtesy of <a href="https://alertcalifornia.org" target="_blank" rel="noopener">ALERTCalifornia | UC San Diego</a> and PG&amp;E. Images refresh automatically about once a minute.</p>
   </section>
 
   <section>
@@ -67,6 +138,10 @@
           <input type="email" id="email" name="email" required placeholder="jane@example.com">
         </div>
         <div class="form-group">
+          <label for="phone">Phone Number <span class="label-optional">(optional &mdash; for text alerts)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="(530) 555-0123">
+        </div>
+        <div class="form-group">
           <label for="address">Parcel Address</label>
           <input type="text" id="address" name="parcel_address" required placeholder="1234 Banner Mountain Rd">
         </div>
@@ -80,6 +155,19 @@
 <footer>
   <p>Banner Mountain Lookout Firewise Community &mdash; A volunteer neighborhood initiative</p>
 </footer>
+
+<script>
+  (function () {
+    var camIds = ['cam-bannermtn1', 'cam-bannermtn2'];
+    setInterval(function () {
+      camIds.forEach(function (id) {
+        var img = document.getElementById(id);
+        if (!img) return;
+        img.src = img.src.split('?')[0] + '?rqts=' + Math.floor(Date.now() / 1000);
+      });
+    }, 60000);
+  })();
+</script>
 
 <script data-goatcounter="https://bmlfwc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
