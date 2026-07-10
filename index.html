@@ -40,22 +40,31 @@
   <section>
     <h2>Our Wildfire Risk</h2>
     <!--
-      All three figures below are sourced (2026-07-08):
-      - CA Wildfire Percentile: apps.wildfirerisk.org (USFS), Risk to Homes, "Compare
-        to: State" for Nevada City = 87th percentile in California ("Very High").
-        Nevada City is the nearest place-level unit USFS's tool supports — it's the
-        incorporated city adjacent to Banner Mountain, not the neighborhood itself.
+      All figures below are sourced (2026-07-08) from apps.wildfirerisk.org (USFS),
+      Risk to Homes, for Nevada City (breadcrumb 06/06057/0600050874). Nevada City is
+      the nearest place-level unit USFS's tool supports — it's the incorporated city
+      adjacent to Banner Mountain, not the neighborhood itself.
+      - National Wildfire Percentile: "Compare to: Nation" = rps_within_nation 0.986
+        -> 99th percentile nationally ("Very High").
+      - CA Wildfire Percentile: "Compare to: State" = rps_within_state 0.867 ->
+        87th percentile in California ("Very High").
       - CAL FIRE Hazard Tier: confirmed via direct query against CAL FIRE's official
         FHSZ ArcGIS service (services.gis.ca.gov/.../Fire_Severity_Zones) at Banner
         Mountain's coordinates: HAZ_CLASS "Very High" on both SRA and LRA layers.
-      - Fire Factor: sourced from an actual First Street property report for 13986
-        Banner Mountain Lookout Rd (on the community's namesake road) = 4/10
-        "Moderate" — a second independent address (12255 Red Dog Rd, community's
-        edge) matched at 4/10 too. Score is parcel-specific and will differ
-        elsewhere, hence the "check your own address" note under the row.
+        Per OSFM (osfm.fire.ca.gov), Moderate/High/Very High are the only three
+        FHSZ tiers that exist, so "Very High" is the top of the scale, not a
+        middle rating.
     -->
-    <p class="risk-kicker">Statewide Risk Comparison &mdash; Banner Mtn. / Nevada County Baseline</p>
+    <p class="risk-kicker">Risk Comparison &mdash; Banner Mtn. / Nevada County Baseline</p>
     <div class="risk-kpi-row">
+      <div class="risk-tile">
+        <div class="risk-tile-value">99<sup>th</sup> <span class="risk-tile-unit">percentile</span></div>
+        <div class="risk-tile-meter">
+          <div class="risk-tile-meter-fill" style="width: 99%;"></div>
+        </div>
+        <div class="risk-tile-label">National Wildfire Percentile</div>
+        <div class="risk-tile-sublabel"><a href="https://apps.wildfirerisk.org/explore/risk-to-homes/06/06057/0600050874/" target="_blank" rel="noopener">USFS Risk to Homes Model</a></div>
+      </div>
       <div class="risk-tile">
         <div class="risk-tile-value">87<sup>th</sup> <span class="risk-tile-unit">percentile</span></div>
         <div class="risk-tile-meter">
@@ -66,19 +75,14 @@
       </div>
       <div class="risk-tile">
         <div class="risk-status-pill">&#9650; Very High</div>
-        <div class="risk-tile-label">CAL FIRE Hazard Tier</div>
-        <div class="risk-tile-sublabel">State Responsibility Area (SRA)</div>
-      </div>
-      <div class="risk-tile">
-        <div class="risk-tile-value">4<span class="risk-tile-unit">/ 10</span></div>
         <div class="risk-tile-meter">
-          <div class="risk-tile-meter-fill" style="width: 40%;"></div>
+          <div class="risk-tile-meter-fill" style="width: 100%;"></div>
         </div>
-        <div class="risk-tile-label">Property Fire Factor&reg;</div>
-        <div class="risk-tile-sublabel"><a href="https://firststreet.org/property/13986-banner-mountain-lookout-rd-nevada-city-ca-95959/611931987_fsid/0" target="_blank" rel="noopener">First Street Foundation</a></div>
+        <div class="risk-tile-label">CAL FIRE Hazard Tier</div>
+        <div class="risk-tile-sublabel">Highest of 3 tiers (Moderate, High, Very High) &mdash; State Responsibility Area (SRA)</div>
       </div>
     </div>
-    <p class="map-caption">Higher localized risk than ~87% of California communities, per USFS's Nevada City assessment. Fire Factor is scored per parcel and varies across the neighborhood &mdash; look up your own address at <a href="https://firststreet.org" target="_blank" rel="noopener">firststreet.org</a>.</p>
+    <p class="map-caption">Higher localized risk than 99% of communities nationwide, and ~87% of California communities, per USFS's Nevada City assessment.</p>
 
     <details class="risk-methodology">
       <summary>How these risk metrics are calculated</summary>
