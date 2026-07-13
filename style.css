@@ -498,6 +498,14 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
+.event-card.past {
+  opacity: 0.6;
+}
+
+.event-card.past h3 {
+  text-decoration: line-through;
+}
+
 /* ── FAQ ── */
 .faq-item {
   background: #fff;
@@ -521,6 +529,45 @@ a:hover {
 .faq-answer ul li {
   margin-bottom: 0.35rem;
   font-size: 0.95rem;
+}
+
+/* ── RADIO CHANNEL TABLE ── */
+.radio-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.radio-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.radio-table th,
+.radio-table td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--tan);
+  white-space: nowrap;
+}
+
+.radio-table th {
+  background: var(--green);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.radio-table tr:last-child td {
+  border-bottom: none;
+}
+
+.radio-table tr:nth-child(even) td {
+  background: var(--cream);
 }
 
 /* ── FOOTER ── */
