@@ -384,6 +384,13 @@ a:hover {
   box-shadow: 0 0 0 2px rgba(200,75,23,0.15);
 }
 
+.form-privacy-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
 .btn {
   background: var(--orange);
   color: #fff;
