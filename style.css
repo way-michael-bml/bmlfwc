@@ -148,6 +148,15 @@ a:hover {
   color: var(--orange-light);
 }
 
+/* ── CONTENT LISTS ── */
+.content-list {
+  margin: 0.5rem 0 0.9rem 1.4rem;
+}
+
+.content-list li {
+  margin-bottom: 0.4rem;
+}
+
 /* ── CARDS ── */
 .card {
   background: #fff;
@@ -367,7 +376,9 @@ a:hover {
   color: var(--text-muted);
 }
 
-.form-group input {
+.form-group input,
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 0.55rem 0.75rem;
   border: 1px solid var(--border);
@@ -378,7 +389,14 @@ a:hover {
   transition: border-color 0.15s;
 }
 
-.form-group input:focus {
+.form-group textarea {
+  resize: vertical;
+  min-height: 4.5rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
   outline: none;
   border-color: var(--orange);
   box-shadow: 0 0 0 2px rgba(200,75,23,0.15);
