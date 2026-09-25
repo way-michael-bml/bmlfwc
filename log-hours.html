@@ -41,7 +41,9 @@
     <p><a href="documents.html">&larr; Back to Documents</a></p>
     <p>To keep our official Firewise USA recognition each year, our neighborhood needs to collectively log a minimum amount of volunteer time and/or money spent on wildfire safety work &mdash; see our <a href="faq.html">FAQ</a> for what counts. If you cleared brush, limbed a tree, cleaned gutters, or paid a contractor for fuel reduction, log it below. This log is for our internal recognition tracking only and won&rsquo;t be shared publicly.</p>
 
-    <form action="https://formspree.io/f/mdekezvb" method="POST" class="contact-form">
+    <form action="https://script.google.com/macros/s/AKfycbxLNQjFDuCL8kHm2dTYOD6p_DmgOtJzln3GyednuSJNjc2ssNP8LUzfGCtix8VPX6-1/exec" method="POST" data-ajax class="contact-form" data-success="Thanks, {name}! Your entry for {date} was logged. Every hour and dollar counts toward our Firewise recognition.">
+      <input type="hidden" name="_form" value="log_hours">
+      <div class="hp-field" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
       <input type="hidden" name="_subject" value="Hours &amp; Expense Log Entry &mdash; bmlfirewise.org">
       <div class="form-group">
         <label for="lh-name">Name</label>
@@ -81,6 +83,7 @@
   <p>Banner Mountain Lookout Firewise Community &mdash; A volunteer neighborhood initiative</p>
 </footer>
 
+<script src="forms.js"></script>
 <script data-goatcounter="https://bmlfwc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>

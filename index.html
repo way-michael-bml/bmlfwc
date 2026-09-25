@@ -140,12 +140,12 @@
     <p class="form-privacy-note">Your privacy matters to us: information you submit here is used only to keep you informed about the Banner Mountain Lookout Firewise Community. We store it securely, never sell it, and never share it with third parties or affiliates for marketing or promotional purposes.</p>
     <div class="contact-form">
       <!--
-        Formspree setup:
-        1. Create a free account at formspree.io using your email address.
-        2. Create a new form — Formspree will give you a form ID (looks like "xpwzabcd").
-        3. Replace YOUR_FORM_ID below with that ID.
+        Submissions go to the Google Apps Script web app in _apps-script/Code.gs,
+        which saves them to the "Mailing List" tab of the submissions Google Sheet.
       -->
-      <form action="https://formspree.io/f/xjgqjqko" method="POST">
+      <form action="https://script.google.com/macros/s/AKfycbxLNQjFDuCL8kHm2dTYOD6p_DmgOtJzln3GyednuSJNjc2ssNP8LUzfGCtix8VPX6-1/exec" method="POST" data-ajax data-success="Thanks, {name}! You&rsquo;re on the mailing list. Watch your inbox for meeting announcements and updates.">
+        <input type="hidden" name="_form" value="mailing_list">
+        <div class="hp-field" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
         <div class="form-group">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required placeholder="Jane Smith">
@@ -187,6 +187,7 @@
   })();
 </script>
 
+<script src="forms.js"></script>
 <script data-goatcounter="https://bmlfwc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>

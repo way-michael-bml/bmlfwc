@@ -402,6 +402,66 @@ a:hover {
   box-shadow: 0 0 0 2px rgba(200,75,23,0.15);
 }
 
+/* Required-field marker */
+.form-group:has(:required) > label::after {
+  content: " *";
+  color: var(--orange);
+}
+
+/* Field errors (set by forms.js once a field has been touched) */
+.form-group input.touched:invalid,
+.form-group textarea.touched:invalid,
+.form-group select.touched:invalid {
+  border-color: #B42318;
+  background: #FEF3F2;
+}
+
+.form-group input.touched:invalid:focus,
+.form-group textarea.touched:invalid:focus,
+.form-group select.touched:invalid:focus {
+  box-shadow: 0 0 0 2px rgba(180,35,24,0.18);
+}
+
+.field-error {
+  color: #B42318;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.field-error:empty {
+  display: none;
+}
+
+/* Submission status (set by forms.js) */
+.form-status {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  border-left: 4px solid;
+  font-size: 0.95rem;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status--success {
+  background: #EEF5E9;
+  border-color: var(--green-mid);
+  color: var(--green);
+}
+
+.form-status--error {
+  background: #FEF3F2;
+  border-color: #B42318;
+  color: #7A271A;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
 .form-privacy-note {
   font-size: 0.82rem;
   color: var(--text-muted);
@@ -612,4 +672,13 @@ footer {
   main         { padding: 1.75rem 1rem 2rem; }
   .camera-grid { grid-template-columns: 1fr; }
   .risk-kpi-row { grid-template-columns: 1fr; }
+}
+
+/* Spam trap field: hidden from people, filled in by bots */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
